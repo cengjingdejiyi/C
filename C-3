@@ -1,0 +1,11 @@
+//编程求解任意多项式 ax4 + bx3 + cx + d 的值 (例如，a = 2, b = 3, c = 4, d = 2, x = 2.1)
+#include<stdio.h>
+#include<math.h> 
+int main(){
+  int a = 2, b = 3, c = 3,d = 2;
+  double x = 2.1;
+  double sum = 0;
+  sum = a * pow(x,4) + b * pow(x,3) + c * x + d; 
+  printf("%1f", sum);
+  return 0;
+}
