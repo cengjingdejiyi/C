@@ -1,3 +1,4 @@
+//编程定义两个变量，求其和、差、积和商，并输出
 #include<stdio.h>
 int main(){
 	int x = 1,y = 2;
