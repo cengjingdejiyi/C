@@ -1,3 +1,4 @@
+编程求解分式 （a+bc）/（de−fg） 的值。思考：分母为 0 时怎么办？
 #include<stdio.h>
 int main(){;
 	int a = 2, b = 3, c = 4, d = 5, e = 6, f = 1, g = 30,p = 0;
