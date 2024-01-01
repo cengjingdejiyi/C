@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main(){;
+	int a = 2, b = 3, c = 4, d = 5, e = 6, f = 1, g = 30,p = 0;
+	double sum = 0;
+	sum = (a + b * c)*1.0/(d * e - f * g);
+	p = d*e-f*g;
+	if (p == 0)
+	{
+	printf("分母为0无意义");
+}
+	else
+	{
+	printf("%1f",sum);
+} 
+	
+	return 0;
+}
