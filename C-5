@@ -1,0 +1,14 @@
+//编写程序，用 scanf() 函数完成数值变量 a，b，c 的输入，并用 printf() 函数完成三者
+//的和的输出。
+#include<stdio.h>
+int main(){
+    int a,b ,c;
+    
+	scanf("%d,%d,%d",&a,&b,&c);
+	
+	int sum = a + b + c;
+	
+	printf("%d",sum);
+	
+	return 0; 
+} 
