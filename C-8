@@ -1,0 +1,18 @@
+// 编程计算方程 ax2 + bx + c = 0 的根。提示：加载头文件 math.h，必要时可直接调用
+//其中的开方函数 sqrt() 进行相关计算。　
+#include<stdio.h>
+#include<math.h>
+int main(){
+	int a,b,c;
+	double x1,x2;
+	scanf("%d,%d,%d",&a,&b,&c);
+	if(b*b-4*a*c<0){
+	printf("无实数根");
+	}
+	else{
+	x1 = (-b+sqrt(b*b-4*a*c))/(2*a);
+	x2 = (-b-sqrt(b*b-4*a*c))/(2*a);
+	printf("%f,%f",x1,x2);
+	} 
+	return 0;
+} 
