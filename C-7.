@@ -1,0 +1,16 @@
+// 编程输入三个数，判定是否能够构成直角三角形。
+#include<stdio.h>
+#include<math.h> 
+int main(){
+   double a,b,c; 
+   scanf("%lf,%lf,%lf",&a,&b,&c);//要用%lf才行%f无效 
+   
+   if(pow(a,2)+pow(b,2)==pow(c,2)||pow(a,2)+pow(c,2)==pow(b,2)||pow(c,2)+pow(b,2)==pow(a,2)){
+   printf("能构成直角三角形\n"); 
+   }
+   
+   else{
+   printf("不能构成直角三角形\n");
+   } 
+   return 0;
+} 
