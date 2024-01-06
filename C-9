@@ -1,0 +1,25 @@
+//编程实现成绩等级的转换：把 (非负的) 数字成绩 g 转化成字母成绩：A(对应 90 ≤
+//g ≤ 100)，B(对应 80 ≤ g < 90)，C(对应 70 ≤ g < 80)，D(对应 60 ≤ g < 70) 和 F(对
+//应 0 ≤ g < 60)。
+#include<stdio.h>
+int main(){
+	int g;
+	scanf("%d",&g);
+	
+	if(g>=90&&g<=100){
+		printf("A");
+	}	
+	else if(g>=80&&g<90){
+		printf("B");
+	}
+	else if(g>=70&&g<80){
+		printf("C");
+	}
+	else if(g>=60&&g<70){
+		printf("D");
+	}
+	else if(g>=0&&g<60){
+		printf("F");
+	}
+	return 0;
+} 
