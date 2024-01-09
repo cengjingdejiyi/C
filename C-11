@@ -1,0 +1,22 @@
+//判断一个数是否为对称数。例如：12321 和 1221 各自左右对称，都是对称数。
+#include<stdio.h>
+int main(){
+    int num=0,mun=0,a=0,num0=0;//int num,mun,a,num0=0;
+     scanf("%d",&num0);
+    num = num0;
+    while(num != 0){//!=判定符意思为不等于 ， 若满足结果为真，不满足结果为假 
+    	a = num % 10;
+    	mun = a + mun * 10;
+    	num /= 10;//赋值符号，等价于num = num / 10 
+	}
+    if(num0 == mun){
+    	printf("该数是一个对称数"); 
+	}
+    else{
+    	printf("该数不是一个对称数"); 
+	} 
+	
+	return 0;
+}  
+//结果：12321
+//      该数是一个对称数 
