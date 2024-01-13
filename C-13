@@ -1,0 +1,34 @@
+//编程输出 1000 对孪生素数 (差值为 2 的成对素数，例如，3 和 5，11 和 13)，只需列
+//出前 10 对。
+#include<stdio.h>
+int isPrime(int n) {  
+    int i;  
+    if (n <= 1) {  
+        return 0;  
+    }  
+    for (i = 2; i * i <= n; i++) {  
+        if (n % i == 0) {  
+            return 0;  
+        }  
+    }  
+    return 1;
+}  //判断一个数是否为质数的函数，如果是a质数，
+   //则isPrime（a）返回1，结果为真，如果不是，返回0.结果为假 
+int main(){
+    int a=0,b=0;
+    
+for(a=1;a<=1000;a++){
+	b = a + 2;
+	if(isPrime(a)&&isPrime(b)){//当ab同时为质数时才判定为真，否则 
+	//if(isPrime(a)==1&&isPrime(b)==1	
+		printf("%d,%d\n",a,b);
+	} 
+	else{
+		printf(" ");
+	}//此句删去不要后结果更加简洁 
+}
+    
+	return 0;
+}  
+//结果：3，5    5，7    11，13   17，19   29，31
+//      41，43   59，61   71，73   101，103   107，109 
