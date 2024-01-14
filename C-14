@@ -1,0 +1,33 @@
+//输出如下所示的矩阵。提示：在分析数据规律的基础上实现数据的计算和输出。
+//1 2 3 4 5
+//1 4 9 16 25
+//2 6 12 20 30
+//3 10 21 36 55
+#include<stdio.h>
+int main(){
+   int ran1[] = {1,2,3,4,5};//用数组定义第一二行，从第三行开始每行对应前两行相加 
+   int ran2[] = {1,4,9,16,25};
+   int ran3[5];
+   int ran4[5];
+   int ran5[5];
+   int ran6[5];
+   int a;
+   printf("%d,%d,%d,%d,%d\n",ran1[0],ran1[1],ran1[2],ran1[3],ran1[4]);
+   printf("%d,%d,%d,%d,%d\n",ran2[0],ran2[1],ran2[2],ran2[3],ran2[4]);
+   for(a=0;a<5;a++){//用for循环计算每行各个数 
+   	ran3[a] = ran2[a] + ran1[a];
+ 
+   	ran4[a] = ran3[a] + ran2[a];
+  
+   	ran5[a] = ran4[a] + ran3[a];
+
+   	ran6[a] = ran5[a] + ran4[a];
+   }
+     
+   printf("%d,%d,%d,%d,%d\n",ran3[0],ran3[1],ran3[2],ran3[3],ran3[4]);
+   printf("%d,%d,%d,%d,%d\n",ran4[0],ran4[1],ran4[2],ran4[3],ran4[4]);
+   printf("%d,%d,%d,%d,%d\n",ran5[0],ran5[1],ran5[2],ran5[3],ran5[4]);
+   printf("%d,%d,%d,%d,%d\n",ran6[0],ran6[1],ran6[2],ran6[3],ran6[4]);   
+   
+   return 0;
+}  
