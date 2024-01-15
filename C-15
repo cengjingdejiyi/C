@@ -1,0 +1,31 @@
+//通过函数调用，实现任意两个数的除法运算。
+#include<stdio.h>
+double chu(int a,int b)//创建一个函数，返回a除b的值 
+{
+	double z = a*1.0 / b; 
+	return z;            //在C语言中，如果两个操作数都是整数，那
+	                     //么结果也会是整数。这意味着1 / 2的结果
+						 //是0，而不是0.5。
+						 //为了修复这个问题，需要将至少一个操作
+						 //数变为浮点数
+						 //用*1.0修正计算结果
+						 //或者 return (double)a / b;  
+} 
+int main(){
+	int x=0,y=0;
+	double res;
+	printf("输入被除数，除数："); 
+	scanf("%d,%d",&x,&y);
+	if(y==0){//排除除数为0的情况 
+		printf("无意义"); 
+	}
+	else{
+	res = chu(x,y);
+	printf("%lf",res);
+    }
+	return 0;
+}
+//结果：1，2 
+//      0.500000
+
+ 
