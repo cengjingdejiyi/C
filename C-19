@@ -1,0 +1,19 @@
+//采用递归方法，逆序输出正整数。
+#include<stdio.h>    
+int reverse(int n) {  
+    if (n < 10) {  
+        return n;  
+    } else {  
+        printf("%d", n % 10);
+		return reverse(n / 10);   
+    }  
+}   
+  
+int main(){
+    int i;  
+    scanf("%d",&i);    
+    printf("%d",reverse(i));
+    return 0;  
+}
+//结果：1234
+//      4321 
