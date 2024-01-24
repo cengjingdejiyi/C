@@ -1,0 +1,19 @@
+//使用数组，求出 100 个学生编程基础课的及格人数及所占比例。
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+    int  xuesheng[100];//定义一个容量为100名字为xuesheng的数组 
+    int m=0;
+    for(int i=1;i<101;i++){
+    	xuesheng[i]=rand()%100+1;//用随机数生成每一个学生的分
+		                         //数，如果大于60，就为通过 
+    	if(xuesheng[i]>60){
+    		m++;
+		}
+	}
+    printf("及格人数为%d人\n",m);
+    printf("所占比例为%d%",m); 
+    return 0;  
+}
+//结果：及格人数为33人 
+//结果：所占比例为33% 
