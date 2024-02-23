@@ -1,0 +1,33 @@
+//对一维数据（假设有 N 个元素）进行排序。试分析最多需要对换元素的次数，何时会
+//出现这种情况？
+#include<stdio.h>
+int main(){
+	int account=0;
+    int arr[7]={0};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    for(int z=0;z<n;z++){
+    	scanf("%d,",&arr[z]);
+	}
+	for(int x=0;x<n;x++){//冒泡排序法 
+		for(int y=0;y<n-1;y++){
+			if(arr[y]>arr[y+1]){
+				int a;
+				a=arr[y+1];
+				arr[y+1]=arr[y];
+				arr[y]=a;
+				account++;//如果完全逆序（即数据按照
+				          //从大到小排序），所需次数
+						  //最多为n(n-1)/2次 
+			}
+		}
+	}
+	printf("调换次数为%d\n",account);
+	printf("从小到大排序为：");
+    for(int b=0;b<n;b++){
+    	printf("%d,",arr[b]);
+	}
+    return 0;  
+}
+//结果:
+//7,6,5,4,3,2,1,
+//从小到大排序为：1,2,3,4,5,6,7
