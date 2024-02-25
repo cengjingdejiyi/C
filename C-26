@@ -1,0 +1,38 @@
+//实现折半查找（注意前提条件）。
+#include<stdio.h>
+//函数声明 
+int zheban(int arr[],int a,int b,int c){                                 
+	int mid = (a+b)/2;
+	// 计算中间位置索引
+	if(arr[mid]==c){
+	   return mid;
+	   }
+	else if(arr[mid]<c){
+		return zheban(arr,mid+1,b,c);
+		// 如果中间位置的值小于c，则说明c位于右半部分，递归查找右半部分数组 
+	    }
+	else{
+		return zheban(arr,a,mid-1,c);
+		// 如果中间位置的值大于c，则说明c位于左半部分，递归查找左半部分数组
+	    }
+    }
+int main() {  
+    int arr1[15] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+	//前提条件：所搜索的数组必须是从小到大排好序的  
+    printf("请输入要查找的数：\n");  
+    int i;  
+    scanf("%d", &i);  
+    // 调用zheban函数进行查找，并获取返回值  
+    int mid = zheban(arr1, 0, sizeof(arr1) / sizeof(arr1[0]), i);
+	//搜索范围，下标下限，下标上限，搜索值  
+    if (mid == -1) {  
+        printf("查找不到该数\n");  
+    } else {  
+        printf("所查找的数下标为%d\n", mid);  
+    }  
+    return 0;  
+}  
+//结果:
+//请输入要查找的数：
+//5
+//所查找的数下标为4
