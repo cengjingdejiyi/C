@@ -1,0 +1,29 @@
+//化简分数（注意问题的等价性）
+#include<stdio.h>
+int gongyue(int a,int b){       //创建一个用于寻找分子分
+                                //母最大公约数的函数 
+	int c;       
+	for(int i=1;i<=a&&i<=b;i++){ 
+		if(b%i==0&&a%i==0){      
+		c = i;                  
+		}
+	}
+	return c;
+}
+void huajian(int x,int y){
+    int n = gongyue(x,y);
+    x = x/n;//分子分母同时除以最大
+    y = y/n;//公约数后即为最简结果 
+    printf("%d/%d",x,y);
+} 
+int main() {  
+    int a,b;
+    printf("输入分子/分母：");
+    scanf("%d,%d",&a,&b);
+    printf("\n化简后为：");
+    huajian(a,b);
+    return 0;  
+}  
+//结果:
+//输入分子/分母：24,36
+//化简后为：2/3
