@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<string.h>
+void swap(int* pa,int* pb){
+	int temp = 0;
+	temp = *pa;
+	*pa = *pb;
+	*pb = temp;
+}
+int main(){
+//strcpy函数 
+//	char arr1[] = "bit";
+//	char arr2[20] = "0";
+//	strcpy(arr2,arr1);
+//	printf("%s\n",arr2);
+//memset函数 
+//    char arr[] = "hello world";
+//	memset(arr, '*', 5);
+//	printf("%s\n",arr);
+//指针
+//    int a = 10;
+//	int* pa = &a;
+//	*pa = 20;//*pa解引用操作符（通过解引用找到a的地址，
+//	         //此时*pa就是a，对*pa赋值就是对a赋值 
+//	printf("%d",a);
+//用指针，函数来达成交换两个数的值
+	int a = 10;
+	int b = 20;
+	printf("%d,%d\n",a,b); 
+	swap(&a,&b);
+	printf("%d,%d",a,b); 
+	return 0;
+}
