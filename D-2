@@ -1,0 +1,15 @@
+#include<stdio.h>
+int strlen(char* len){
+	if(*len != '\0'){
+		return 1+strlen(len+1);
+	}
+	else{
+		return 0;
+	}
+}
+int main(){
+	char arr[] = "bit";
+	int length = strlen(arr);
+	printf("%d",length);
+	return 0;
+}
